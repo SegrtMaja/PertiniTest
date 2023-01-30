@@ -15,15 +15,13 @@ public class BaseTest {
 
     WebDriver driver = null;
 
-    @BeforeClass
-    public void beforeClass() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Svetlana&Maja&Jefto\\ChromeDriver\\chromedriver.exe");
-        driver = new ChromeDriver();
-    }
 
     //   Method for opening  Chrome driver
 
     public WebDriver openChromeDriver() {
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Svetlana&Maja&Jefto\\ChromeDriver\\chromedriver.exe");
+        driver = new ChromeDriver();
+
         print ( "Opening Chrome Driver" );
         ChromeOptions options = new ChromeOptions ();
         options.addArguments ( new String[]{"--ignore-certificate-errors"} );
